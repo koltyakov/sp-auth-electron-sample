@@ -32,11 +32,11 @@ app.on('ready', () => {
 
         mainWindow = new BrowserWindow({
           width: 1024,
-          height: 768,
-          webPreferences: {
-            webSecurity: false,
-            nodeIntegration: false
-          }
+          height: 768
+          // webPreferences: {
+          //   webSecurity: false,
+          //   nodeIntegration: false
+          // }
         });
 
         mainWindow.loadURL(conf.siteUrl);
