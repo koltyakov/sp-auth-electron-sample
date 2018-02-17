@@ -1,0 +1,19 @@
+{
+  "name": "sp-auth-electron-sample",
+  "version": "1.0.0",
+  "main": "./build/main.js",
+  "scripts": {
+    "start": "tsc && node ./build/conf && electron . --enable-logging",
+    "auth": "tsc && node ./build/conf"
+  },
+  "dependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^9.4.6",
+    "electron": "^1.8.2",
+    "node-sp-auth": "^2.3.4",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.1",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.7.2"
+  }
+}
