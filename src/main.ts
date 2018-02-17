@@ -21,7 +21,7 @@ app.on('ready', () => {
             const index = c.indexOf('=');
             const name = c.substring(0, index);
             const value = c.substring(index + 1, c.length);
-            return { url, name, value, secure: true, httpOnly: true };
+            return { url, name, value };
           });
 
         console.log(cookies);
@@ -30,14 +30,7 @@ app.on('ready', () => {
           await setCookiePromise(session.defaultSession.cookies, cookie);
         }
 
-        mainWindow = new BrowserWindow({
-          width: 1024,
-          height: 768
-          // webPreferences: {
-          //   webSecurity: false,
-          //   nodeIntegration: false
-          // }
-        });
+        mainWindow = new BrowserWindow({ width: 1024, height: 768 });
 
         mainWindow.loadURL(conf.siteUrl);
 
